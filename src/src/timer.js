@@ -96,5 +96,8 @@ btnStart.addEventListener('click', ev => {
 
 btnStop.addEventListener('click', ev => {
     clearInterval(idSetInterval);
+    const sound = new Howl({
+        src: [mus, mus2]
+    });
     sound.stop();
 })
