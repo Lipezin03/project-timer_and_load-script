@@ -1,7 +1,9 @@
 "use strict";
 
 import { declOfNum } from "./common.js";
-import "https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.1/howler.min.js";
+// import "https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.1/howler.min.js";
+import { Howl } from 'howler';
+
 
 
 const daysVal = document.querySelector('.timer__day .timer__val');
@@ -52,6 +54,7 @@ function renderTimer() {
         clearInterval(idSetInterval)
         document.querySelector('.timer__box').classList.add('visually-hidden');
         document.querySelector('.time-out').classList.remove('visually-hidden');
+        return false;
 
     }
 
@@ -83,7 +86,7 @@ function renderTimer() {
 let idSetInterval;
 
 btnStart.addEventListener('click', ev => {
-    if (timeMinut <= 0) {
+    if (timeMinut <= 0 || timeMinut == undefined) {
         return;
     }
     idSetInterval = setInterval(renderTimer, 1000);

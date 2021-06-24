@@ -1,5 +1,6 @@
 "use strict";
 
+import "../css/style.css";
 import "./formDate.js";
 import "./timer.js";
 import { formEl } from "./formDate.js"
