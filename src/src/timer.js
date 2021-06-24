@@ -3,6 +3,8 @@
 import { declOfNum } from "./common.js";
 // import "https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.1/howler.min.js";
 import { Howl } from 'howler';
+import mus from "../mp3/09260.mp3";
+import mus2 from "../mp3/timer.mp3";
 
 
 
@@ -47,7 +49,7 @@ function renderTimer() {
 
     if (timeMinut <= 0) {
         const sound = new Howl({
-            src: ['mp3/09260.mp3']
+            src: [mus]
         });
         sound.stop();
         sound.play();
@@ -75,7 +77,7 @@ function renderTimer() {
     secondsText.textContent = declOfNum(seconds, ['секунда', 'секунды', 'секунд']);
     timeMinut -= 1000
     const sound = new Howl({
-        src: ['mp3/timer.mp3']
+        src: [mus2]
     });
 
     sound.play();
