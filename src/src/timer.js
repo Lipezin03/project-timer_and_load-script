@@ -56,7 +56,6 @@ function renderTimer() {
         clearInterval(idSetInterval)
         document.querySelector('.timer__box').classList.add('visually-hidden');
         document.querySelector('.time-out').classList.remove('visually-hidden');
-        return false;
 
     }
 
@@ -86,11 +85,13 @@ function renderTimer() {
 
 // renderTimer();
 let idSetInterval;
+let activ = false;
 
 btnStart.addEventListener('click', ev => {
-    if (timeMinut <= 0 || timeMinut == undefined) {
+    if (timeMinut <= 0 || timeMinut == undefined || activ) {
         return;
     }
+    activ = true;
     idSetInterval = setInterval(renderTimer, 1000);
 })
 
@@ -100,4 +101,5 @@ btnStop.addEventListener('click', ev => {
         src: [mus, mus2]
     });
     sound.stop();
+    activ = false;
 })
