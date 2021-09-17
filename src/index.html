@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datetime superapp</title>
+    <!-- <link rel="stylesheet" href="./css/style.css">
+    <script src="./src/main.js" type="module"></script> -->
+</head>
+
+<body>
+    <div class="pages">
+        <h2 id="page1">Калькулятор дат</h2>
+        <h2 id="page2">Таймер обратного отчета</h2>
+    </div>
+
+    <div class="block-form visually-hidden">
+        <form id="form-date">
+            <label for="date1">
+                <strong>Первая дата:</strong>
+                <input type="date" name="date1" id="date1">
+            </label>
+            <label for="date2">
+                <strong>Вторая дата:</strong>
+                <input type="date" name="date2" id="date2">
+            </label>
+            <button class="button-fotm" type="submit">Расчитать промежуток</button>
+
+        </form>
+        <p class="message"></p>
+    </div>
+
+
+
+
+    <div class="timer-block visually-hidden">
+
+        <div class="block-input">
+            <p>Введите время для таймера:</p>
+            <p><input class="input input-day" type="text" placeholder="дни"></p>
+            <p><input class="input input-hours" type="text" placeholder="часы"></p>
+            <p><input class="input input-minutes" type="text" placeholder="минуты"></p>
+            <p><input class="input input-seconds" type="text" placeholder="секунды"></p>
+            <button class="button-input">Задать время таймеру</button>
+        </div>
+
+        <div class="timer">
+            <div class="timer__content">
+                <h4 class="timer__title">Таймер:</h4>
+                <div class="timer__box">
+                    <div class="timer__item timer__day">
+                        <div class="timer__val">00</div>
+                        <div class="timer__text">дни</div>
+                    </div>
+                    <div class="timer__separator">:</div>
+                    <div class="timer__item timer__hours">
+                        <div class="timer__val">00</div>
+                        <div class="timer__text">часы</div>
+                    </div>
+                    <div class="timer__separator">:</div>
+                    <div class="timer__item timer__minutes">
+                        <div class="timer__val">00</div>
+                        <div class="timer__text">минуты</div>
+                    </div>
+                    <div class="timer__separator">:</div>
+                    <div class="timer__item timer__seconds">
+                        <div class="timer__val">00</div>
+                        <div class="timer__text">секунды</div>
+                    </div>
+                </div>
+                <p class="time-out visually-hidden">Время вышло!!!</p>
+                <div class="timer__button">
+                    <div class="btn btn-start">Старт</div>
+                    <div class="btn btn-stop">Стоп</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
